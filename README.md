@@ -7,7 +7,8 @@ We encourage new users to follow guides on our Discord (https://discord.gg/mFrPP
 
 # Version History
 
-AIO 3.2 additions, changes & fixes - (W.I.P.)
+AIO 3.2 
+
 - Merchant ship pack & diesel interior submods fully integrated into the OA AIO data folder (Warboy)
 - New historical aircraft from the Battle of the Atlantic:B-25, Lancaster, DO 17, BF 110 & Pe-2 (Warboy)
 - Many new ships added that were missing, destroyer/corvettes, cruisers & more merchants (Warboy)
@@ -23,10 +24,11 @@ AIO 3.2 additions, changes & fixes - (W.I.P.)
 - Several changes for 1366x768 GUI submod plus other minor changes & improvements (AirShark)
 - Animated crew on deck (shift + D), now they wave their hands or caps randomly (Warboy)
 - Voice command application mod, you can give orders through vocal commands now (BlinkingApe)
-- Environmental gameplay features including mist/moon, DC turbulence & thermal layer detection (Rik007)
+- Environmental gameplay features including mist/moon, DC turbulence & thermal layer detection (Rik007), Tweaked for OA AIO (BlinkingApe + Jebby)
 - Red interior night lights removed and replaced with historical dimmed white lights (BlinkingApe)
-- New main menu background and intro video beautifully made by (The Great Gambino)
+- New Menu UIs and intro video beautifully made by (The Great Gambino + Jebby)
 - Updated GUI with better navigation tools, optics, charts & functionality buttons (Okami)
+- Merged Campaign files. Unified campaign, except Black sea (Jebby)
 
 AIO 3.1 hotfix
 - several textures and command file fixes (Okami & AirShark)
