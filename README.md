@@ -1,4 +1,8 @@
-# SH3-AIO-Releases
+# SH3 OneAlex All In One 
+
+A Megamod based on OneAlex's version 1.53
+
+We encourage new users to follow guides on our Discord (https://discord.gg/mFrPPx8sVX) for installation. We will also provide support.
 
 
 # Version History
