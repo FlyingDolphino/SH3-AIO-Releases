@@ -14,11 +14,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
         
-      - name: Setup GitHub CLI
-        uses: cli/cli-action@v1
-        with:
-          # Use the PAT stored as a secret to authenticate gh to access Repo A
-          github-token: ${{ secrets.REPO_DEV_PAT }}
+      - name: Authenticate GitHub CLI for Cross-Repo Access
+        run: |
+          echo ${{ secrets.REPO_DEV_PAT }} | gh auth login --with-token
+          echo "GitHub CLI is authenticated."
 
       - name: Download Asset from Dev repo
         id: download
@@ -26,7 +25,6 @@ jobs:
           REPO_A: FlyingDolphino/SH3-AIO 
           TAG: ${{ github.event.client_payload.tag }}
           ASSET_NAME: '*.7z'
-          GH_TOKEN: ${{ secrets.REPO_DEV_PAT }}
         run: |
           echo "Attempting to download release asset for tag: $TAG"
           
