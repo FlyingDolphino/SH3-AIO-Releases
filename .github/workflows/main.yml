@@ -26,7 +26,7 @@ jobs:
           REPO_A: FlyingDolphino/SH3-AIO 
           TAG: ${{ github.event.client_payload.tag }}
           ASSET_NAME: '*.7z'
-          GH_TOKEN: ${{ secrets.REPO_A_PAT }}
+          GH_TOKEN: ${{ secrets.REPO_DEV_PAT }}
         run: |
           echo "Attempting to download release asset for tag: $TAG"
           
