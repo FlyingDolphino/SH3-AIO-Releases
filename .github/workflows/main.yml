@@ -23,10 +23,9 @@ jobs:
       - name: Download Asset from Dev repo
         id: download
         env:
-          REPO_A: your-org/your-repo-a-name # <-- CHANGE THIS
+          REPO_A: FlyingDolphino/SH3-AIO 
           TAG: ${{ github.event.client_payload.tag }}
-          # The filename is based on your previous workflow (SH3-AIO-TEST-DD.MM.YY.7z)
-          ASSET_NAME: 'SH3-AIO-TEST-*.7z'
+          ASSET_NAME: '*.7z'
           GH_TOKEN: ${{ secrets.REPO_A_PAT }}
         run: |
           echo "Attempting to download release asset for tag: $TAG"
