@@ -24,7 +24,7 @@ AIO 3.2
 - Several changes for 1366x768 GUI submod plus other minor changes & improvements (AirShark)
 - Animated crew on deck (shift + D), now they wave their hands or caps randomly (Warboy)
 - Voice command application mod, you can give orders through vocal commands now (BlinkingApe)
-- Environmental gameplay features including mist/moon, DC turbulence & thermal layer detection (Rik007), Tweaked for OA AIO (BlinkingApe + Jebby)
+- Environmental gameplay features including mist/moon, DC turbulence & thermal layer detection (Rik007), Tweaked for OA AIO (BlinkingApe + Jebby + The Great Gambino)
 - Red interior night lights removed and replaced with historical dimmed white lights (BlinkingApe)
 - New Menu UIs and intro video beautifully made by (The Great Gambino + Jebby)
 - Updated GUI with better navigation tools, optics, charts & functionality buttons (Okami)
