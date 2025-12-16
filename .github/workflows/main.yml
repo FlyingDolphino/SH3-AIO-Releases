@@ -1,0 +1,57 @@
+name: Mirror Release from dev
+
+on:
+  repository_dispatch:
+    types: [manual_mirror_release]
+
+permissions:
+  contents: write
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        
+      - name: Setup GitHub CLI
+        uses: cli/cli-action@v1
+        with:
+          # Use the PAT stored as a secret to authenticate gh to access Repo A
+          github-token: ${{ secrets.REPO_DEV_PAT }}
+
+      - name: Download Asset from Dev repo
+        id: download
+        env:
+          REPO_A: your-org/your-repo-a-name # <-- CHANGE THIS
+          TAG: ${{ github.event.client_payload.tag }}
+          # The filename is based on your previous workflow (SH3-AIO-TEST-DD.MM.YY.7z)
+          ASSET_NAME: 'SH3-AIO-TEST-*.7z'
+        run: |
+          echo "Attempting to download release asset for tag: $TAG"
+          
+          # Download the asset
+          gh release download "$TAG" \
+            --repo "$REPO_A" \
+            --pattern "${ASSET_NAME}"
+            
+          # Find the actual downloaded filename (as date is dynamic)
+          DOWNLOADED_FILE=$(ls ${ASSET_NAME} | head -n 1)
+          
+          # Output variables for the release step
+          echo "artifact_path=${DOWNLOADED_FILE}" >> $GITHUB_OUTPUT
+          echo "tag_name=${TAG}" >> $GITHUB_OUTPUT
+          echo "release_name=${{ github.event.client_payload.name }}" >> $GITHUB_OUTPUT
+          # The body can be accessed directly from the payload
+          
+      - name: Create Mirror Release in Public Repo
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.download.outputs.tag_name }}
+          name: ${{ steps.download.outputs.release_name }} # Uses the fetched title
+          body: ${{ github.event.client_payload.body }} # Uses the fetched description
+          files: ${{ steps.download.outputs.artifact_path }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
