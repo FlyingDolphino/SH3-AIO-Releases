@@ -28,8 +28,8 @@ AIO 3.2
 - Red interior night lights removed and replaced with historical dimmed white lights (BlinkingApe)
 - New Menu UIs and intro video beautifully made by (The Great Gambino + Jebby)
 - Updated GUI with better navigation tools, optics, charts & functionality buttons (Okami)
-- Merged Campaign files. Unified campaign, except Black sea (Jebby)
 - Subranges adjusted for balancing/SH3 Map size (Fifi)
+- Various small fixes and improvements 
 
 AIO 3.1 hotfix
 - several textures and command file fixes (Okami & AirShark)
