@@ -7,6 +7,17 @@ We encourage new users to follow guides on our Discord (https://discord.gg/mFrPP
 
 # Version History
 
+AIO 3.2 Hotfix 1
+
+- Sea/Roster folder optimisations and fixes (warboy)
+- Sound fixes and improvements (The Great Giambino)
+- Campaign fixes, Med campaign merged into the main campaign. Only black sea remains a seperate submod (Jebby)
+- Re-add higher quality turms for type 7s (Jebby)
+- Interiors fixed and made clickable again (Jebby)
+- New SH3 Commander pictures (The Great Giambino)
+- Many more smaller fixes pointed out by the community :) 
+
+
 AIO 3.2 
 
 - Merchant ship pack & diesel interior submods fully integrated into the OA AIO data folder (Warboy)
